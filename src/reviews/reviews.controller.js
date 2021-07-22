@@ -24,7 +24,7 @@ async function update(req, res) {
         review_id: res.locals.review.review_id,
     };
     await service.update(updatedReview);
-    res.json({ data: await service.updateReviewRecord(res.locals.review.review_id)});
+    res.json({ data: await service.returnUpdated(res.locals.review.review_id)});
 }
 
 module.exports = {
